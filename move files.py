@@ -2,7 +2,7 @@ import os, os.path
 import shutil
 
 path = os.getcwd()
-path_child = path + "\\CONFIDENTIAL - Project Sprint Country Files"
+path_child = path + "\\Project Country Files"
 os.chdir(path_child)
 
 
@@ -36,13 +36,13 @@ regions = [ "SSA", "APAC", "ASEAN","Canada",
 "RUCIS","US"]
 
 for c in countries:
-    src_dir=path+"\\Rename"+"\\Sprint Country Template_ "+str(c)+".xlsm"
+    src_dir=path+"\\Rename"+"\\Country Template_ "+str(c)+".xlsm"
     # dst_dir=path_child+"\\"+str(c)+box_path+"\\"+str(c)+".xlsm"
-    dst_dir=path_child+"\\All_Countries\\"+str(c)+"\\Sprint Country Template_ "+str(c)+".xlsm"
+    dst_dir=path_child+"\\All_Countries\\"+str(c)+"\\Country Template_ "+str(c)+".xlsm"
     shutil.copy(src_dir,dst_dir)
 
 for i  in range(len(files_regions)):
-    src_dir=path+"\\Rename"+"\\Sprint Country Template_ "+str(regions[i])+".xlsm"
+    src_dir=path+"\\Rename"+"\\Country Template_ "+str(regions[i])+".xlsm"
     # dst_dir=path_child+"\\"+str(c)+box_path+"\\"+str(c)+".xlsm"
-    dst_dir=path_child+"\\Sprint_Regions"+"\\"+str(files_regions[i])+"\\Sprint Country Template_ "+str(regions[i])+".xlsm"
+    dst_dir=path_child+"\\Regions"+"\\"+str(files_regions[i])+"\\Country Template_ "+str(regions[i])+".xlsm"
     shutil.copy(src_dir,dst_dir)
